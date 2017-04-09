@@ -1,5 +1,8 @@
-(function () {
+(function (global) {
     "use strict";
+
+    var App = global.App;
+    var colorObj = App.ColorObject;
 
     var headerTarget = document.querySelector('header');
     headerTarget.appendChild(createHeader());
@@ -16,7 +19,10 @@
 
         var colorTarget = document.createElement('h1');
         colorTarget.setAttribute('id', 'colorTarget');
-        colorTarget.textContent = "rgb".toUpperCase();
+        colorTarget.textContent = (
+            "rgb" + "(" + colorObj.redValue + ","
+                        + " " + colorObj.greenValue + ","
+                        + " " + colorObj.blueValue + ")").toUpperCase();
 
         fragment.appendChild(firstName);
         fragment.appendChild(colorTarget);
@@ -24,4 +30,4 @@
         return fragment;
     }
 
-})();
+})(window);
