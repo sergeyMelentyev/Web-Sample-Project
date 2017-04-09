@@ -1,14 +1,21 @@
 var gulp = require('gulp');
 var concat = require('gulp-concat');
 
-gulp.task('scripts', function(){
+gulp.task('initialize', function(){
     return gulp.src([
-        './src/scripts/fragments/header_panel.js',
-        './src/scripts/index.js'
+        './src/scripts/logic/color_object.js'
     ])
-        .pipe(concat('bundle.js'))
+        .pipe(concat('bundle.init.js'))
         .pipe(gulp.dest('./build/'));
 });
+gulp.task('fragments', function(){
+    return gulp.src([
+        './src/scripts/fragments/header_elem.js'
+    ])
+        .pipe(concat('bundle.fragments.js'))
+        .pipe(gulp.dest('./build/'));
+});
+
 gulp.task('styles', function(){
     gulp.src([
         './src/styles/normalize.css',
@@ -18,4 +25,4 @@ gulp.task('styles', function(){
         .pipe(concat('styles.css'))
         .pipe(gulp.dest('./build/'));
 });
-gulp.task('default', ['scripts', 'styles'], function(){});
+gulp.task('default', ['initialize', 'fragments', 'styles'], function(){});
