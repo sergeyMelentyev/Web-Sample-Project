@@ -36,6 +36,10 @@ section {
  * `article` contexts in Chrome, Firefox, and Safari.
  */
 
+body {
+    margin: 0px;
+}
+
 h1 {
     font-size: 2em;
     margin: 0.67em 0;
@@ -426,8 +430,9 @@ template {
     display: none;
 }
 body {
-    background-color: darkgray;
+    font-family: 'Open Sans Condensed', sans-serif;
 }
-body {
-    background-color: rebeccapurple;
+
+.div {
+    border: 1px solid rgba(0,0,0,1);
 }

@@ -16,6 +16,6 @@ gulp.task('styles', function(){
         './src/styles/fragments/header_panel.css'
     ])
         .pipe(concat('styles.css'))
-        .pipe(gulp.dest('build/'));
+        .pipe(gulp.dest('./build/'));
 });
 gulp.task('default', ['scripts', 'styles'], function(){});
