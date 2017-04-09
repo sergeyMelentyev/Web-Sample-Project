@@ -1,7 +1,8 @@
 body {
     font-family: 'Open Sans Condensed', sans-serif;
 }
-
-.div {
-    border: 1px solid lightgray;
+#header {
+    width: 100%;
+    background-color: lightgray;
+    text-align: center;
 }

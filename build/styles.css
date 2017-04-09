@@ -44,6 +44,9 @@ h1 {
     font-size: 2em;
     margin: 0.67em 0;
 }
+h2 {
+    margin: 0;
+}
 
 /* Grouping content
    ========================================================================== */
@@ -432,7 +435,8 @@ template {
 body {
     font-family: 'Open Sans Condensed', sans-serif;
 }
-
-.div {
-    border: 1px solid lightgray;
+#header {
+    width: 100%;
+    background-color: lightgray;
+    text-align: center;
 }
