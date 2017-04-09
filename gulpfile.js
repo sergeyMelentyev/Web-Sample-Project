@@ -3,7 +3,9 @@ var concat = require('gulp-concat');
 
 gulp.task('initialize', function(){
     return gulp.src([
-        './src/scripts/init/color_object.js'
+        './src/scripts/utils/math.js',
+        './src/scripts/init/color_object.js',
+        './src/scripts/init/new_game.js'
     ])
         .pipe(concat('bundle.init.js'))
         .pipe(gulp.dest('./build/'));
