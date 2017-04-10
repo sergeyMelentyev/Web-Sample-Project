@@ -30,4 +30,7 @@
         return fragment;
     }
 
+    document.querySelector('header').style.backgroundColor = 'rgb(' +
+        colorObj.redValue + ',' + colorObj.greenValue + ',' + colorObj.blueValue + ')';
+
 })(window);
